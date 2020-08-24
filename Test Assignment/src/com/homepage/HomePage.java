@@ -67,12 +67,12 @@ public class HomePage {
 		data1[i].setAmount(subArray[3]);
   	}
 	  
-	  // filtering Transaction ID
+	 
 		BiPredicate<X, Y> filterTrans = (x, y) -> {
             return x.getTransactionId().contains(y.getTransactionId());
         };
         
-      // filtering date  
+     
 		BiPredicate<X, Y> filterdate = (x, y) -> {
 		Period period = Period.between(x.getPostingDate(),y.getPostingDate());			
 	 if(((x.getPostingDate().getDayOfWeek()) ==DayOfWeek.SATURDAY ) && y.getPostingDate().getDayOfWeek() == DayOfWeek.SUNDAY)
